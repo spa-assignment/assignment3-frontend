@@ -26,7 +26,6 @@ class AppointmentAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -57,7 +56,6 @@ class AppointmentAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -82,14 +80,12 @@ class AppointmentAPI {
                     }
                 }
 
-                console.log(err)
                 return this.complete(null, err)
             }
 
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -122,7 +118,6 @@ class AppointmentAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -155,7 +150,6 @@ class AppointmentAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -187,7 +181,6 @@ class AppointmentAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',

@@ -33,7 +33,6 @@ class Router {
         // extract path without params
         const pathnameNoParams = pathname.split('?')[0]
         let route = this.routes.find(r => r.path === pathnameNoParams)
-
         // check if route exists
         if (!route) {
             // if route does not exist, use the the fallback route

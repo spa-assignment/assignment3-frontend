@@ -16,8 +16,8 @@ import ManageProductsView from './views/ManageProductsView'
 // function to check if a route is accessible
 const anyoneLoggedIn = () => ({ authorized: Auth.currentUser, redirectTo: '/signin' })
 const anyoneNotLoggedIn = () => ({ authorized: !Auth.currentUser, redirectTo: '/' })
-const userLoggedIn = () => ({ authorized: Auth.currentUser && Auth.currentUser.accessLevel === 2, redirectTo: '/appointments' })
-const adminLoggedIn = () => ({ authorized: Auth.currentUser && Auth.currentUser.accessLevel === 1, redirectTo: '/' })
+const userLoggedIn = () => ({ authorized: Auth.currentUser && Auth.currentUser.accessLevel === 2, redirectTo: !(Auth.currentUser && Auth.currentUser.accessLevel) === 2 ? '/appointments' : '/signin' })
+const adminLoggedIn = () => ({ authorized: Auth.currentUser && Auth.currentUser.accessLevel === 1, redirectTo: !(Auth.currentUser && Auth.currentUser.accessLevel) === 1 ? '/' : '/signin' })
 // const guide = () => ({ isAccessible: Auth.currentUser && !Auth.currentUser.lastLoginAt, redirectTo: Auth.currentUser ? '/' : '/signin' })
 
 // define routes

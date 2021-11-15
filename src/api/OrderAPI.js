@@ -26,7 +26,6 @@ class OrderAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -57,7 +56,6 @@ class OrderAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -88,7 +86,6 @@ class OrderAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -113,14 +110,12 @@ class OrderAPI {
                     }
                 }
 
-                console.log(err)
                 return this.complete(null, err)
             }
 
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -153,7 +148,6 @@ class OrderAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -186,7 +180,6 @@ class OrderAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -218,7 +211,6 @@ class OrderAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -242,6 +234,7 @@ class OrderAPI {
             data: data,
             error: error
         }
+        console.log(response)
         return response
     }
 }

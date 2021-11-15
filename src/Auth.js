@@ -23,12 +23,12 @@ class Auth {
         // check if local token is present
         if (!localStorage.dcAccessToken) {
             // no local token
-            return this.complete({
+            return this.complete(null,{
                 error: {
                     message: 'Please sign in',
                     type: 'no_token'
                 }
-            }, null)
+            })
         }
 
         try {
@@ -47,8 +47,6 @@ class Auth {
                         type: 'session_expired'
                     }
                 }
-                console.log(err)
-
                 // delete local token
                 localStorage.removeItem('dcAccessToken')
                 return this.complete(null, err)
@@ -59,7 +57,6 @@ class Auth {
             return this.complete(data, null)
 
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     message: 'Error validating access token',
@@ -92,14 +89,12 @@ class Auth {
                     }
                 }
 
-                console.log(err)
                 return this.complete(null, err)
             }
 
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -132,7 +127,6 @@ class Auth {
                     }
                 }
 
-                console.log(err)
                 return this.complete(null, err)
             }
 
@@ -144,7 +138,6 @@ class Auth {
             this.currentUser = data.user
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',

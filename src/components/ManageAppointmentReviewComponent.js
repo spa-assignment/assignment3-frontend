@@ -148,8 +148,6 @@ class ManageAppointmentReviewComponent extends LitElement {
         const submitBtn = this.shadowRoot.querySelector('.form__submit')
         submitBtn.setAttribute('loading', '')
 
-        console.log(this.appointment._id.toString())
-
         const response = await AppointmentAPI.updateReview(this.appointment._id.toString(), formData)
         if (response.error) {
             Toast.notify(`Problem updating review: \n${response.error.error.message}`, 'danger')

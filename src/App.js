@@ -28,9 +28,9 @@ class App {
         const response = await Auth.check() 
 
         if (response.error) {
-            Toast.notify(response.error.message, 'error')
-        }  
-        
+            Toast.notify(response.error.error.message, 'danger')
+        } 
+
         Router.init(routes) 
     }
 }

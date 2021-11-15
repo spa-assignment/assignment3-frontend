@@ -24,7 +24,6 @@ class UserAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -57,7 +56,6 @@ class UserAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',

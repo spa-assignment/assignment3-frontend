@@ -69,7 +69,6 @@ class OrdersView {
                 Toast.notify(`${this.orders.length} orders fetched`, 'success')
             }
             
-            console.log(this.orders)
             this.render()
             Utils.fadeInFromTopStaggered('.table__row', timeline, duration, stagger)
         }
@@ -282,7 +281,6 @@ class OrdersView {
                 break
         }
 
-        console.log(status)
         return status
     }
 

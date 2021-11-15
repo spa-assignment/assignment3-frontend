@@ -26,7 +26,6 @@ class ProductsAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -57,7 +56,6 @@ class ProductsAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -88,7 +86,6 @@ class ProductsAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -121,7 +118,6 @@ class ProductsAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',
@@ -153,7 +149,6 @@ class ProductsAPI {
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {
-            console.log(error)
             return this.complete(null, {
                 error: {
                     type: 'client',

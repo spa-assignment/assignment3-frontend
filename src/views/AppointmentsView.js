@@ -200,7 +200,6 @@ class AppointmentsView {
     }
 
     getManageAppointmentReviewDialog(appointment) {
-        console.log(appointment._id.toString())
         return document.getElementById(`review-${appointment._id.toString()}`)
     }
 

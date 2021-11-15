@@ -119,7 +119,9 @@ class ProductView {
                                 <hr>
                             </div>
                             <div class="product__reviews">
-                                ${this.reviews.map(review => html`
+                                ${!this.reviews || this.reviews.length ===0 ? html`
+                                No reviews available` : 
+                                this.reviews.map(review => html`
                                 <sl-card class="product__review">
                                     <div class="card-image product__review-content">
                                         <div class="card-image__image-container product__review-image-container">

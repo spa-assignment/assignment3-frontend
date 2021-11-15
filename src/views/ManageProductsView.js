@@ -102,19 +102,19 @@ class ManageProductsView {
                                                     <sl-input type="text" readonly></sl-input>
                                                 </div>
                                                 <div class="table__cell manage-products__table-cell-image">
-                                                    <dc-input-file id="product-image-add" placeholder="[Otional] Image" alignVertical></dc-input-file>
+                                                    <dc-input-file id="product-add-image" placeholder="[Otional] Image" alignVertical></dc-input-file>
                                                 </div>
                                                 <div class="table__cell manage-products__table-cell-title">
-                                                    <sl-input type="text" name="title" required></sl-input>
+                                                    <sl-input id="product-add-title" type="text" name="title" required></sl-input>
                                                 </div>
                                                 <div class="table__cell manage-products__table-cell-description">
-                                                    <sl-textarea type="text" name="description" rows="3" required></sl-textarea>
+                                                    <sl-textarea id="product-add-description" type="text" name="description" rows="3" required></sl-textarea>
                                                 </div>
                                                 <div class="table__cell manage-products__table-cell-price">
-                                                    <sl-input type="number" name="price" value="1" min="1" required></sl-input>
+                                                    <sl-input id="product-add-price" type="number" name="price" value="1" min="1" required></sl-input>
                                                 </div>
                                                 <div class="table__cell manage-products__table-cell-quantity">
-                                                    <sl-input type="number" name="quantity" value="0" min="0" required></sl-input>
+                                                    <sl-input id="product-add-quantity" type="number" name="quantity" value="0" min="0" required></sl-input>
                                                 </div>
                                                 <div class="table__cell manage-products__table-cell-actions">
                                                     <sl-button id="product-add" type=primary submit>Add</sl-button>
@@ -174,7 +174,7 @@ class ManageProductsView {
         e.preventDefault()
         const formData = e.detail.formData
 
-        const pcInputFileEl = document.getElementById('product-image-add')
+        const pcInputFileEl = document.getElementById('product-add-image')
         formData.append('image', pcInputFileEl.value)
 
         const submitBtn = document.getElementById('product-add')
@@ -221,6 +221,12 @@ class ManageProductsView {
             Toast.notify(`Problem deleting product: \n${response.error.error.message}`, 'danger')
         } else {
             Toast.notify('Product deleted successfully', 'success')
+
+            document.getElementById('product-add-image').clear()
+            document.getElementById('product-add-title').value = ''
+            document.getElementById('product-add-description').value = ''
+            document.getElementById('product-add-price').value = 1
+            document.getElementById('product-add-quantity').value = 1
         }
 
         submitBtn.removeAttribute('loading')

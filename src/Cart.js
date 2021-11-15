@@ -81,7 +81,6 @@ class Cart {
     }
 
     async removeItem(userId, cartItem) {
-        console.log(userId, cartItem)
         try {
             const response = await fetch(`${env.apiUrl}/users/${userId}/cart/products/${cartItem.product._id.toString()}`, {
                 method: 'DELETE',
@@ -98,11 +97,9 @@ class Cart {
                     }
                 }
 
-        console.log('1')
                 return this.complete(null, err)
             }
 
-        console.log('1')
             const data = await response.json()
             return this.complete(data, null)
         } catch (error) {

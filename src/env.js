@@ -1,5 +1,5 @@
 // Export 
 export const env = {
-    apiUrl: 'https://dogcare-backend-deploy.herokuapp.com',
-    apiUrlImage: 'https://dogcare-backend-deploy.herokuapp.com/images'
+    apiUrl: 'https://angry-edison-bdc607.netlify.app',
+    apiUrlImage: 'https://angry-edison-bdc607.netlify.app/images'
 }
