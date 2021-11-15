@@ -1,6 +1,5 @@
-import { html, LitElement, css, nothing } from 'lit-element'
+import { html, LitElement, css } from 'lit-element'
 import Cart from '../Cart'
-import ProductsAPI from '../api/ProductsAPI'
 import Toast from '../Toast'
 import { env } from '../env'
 import { goToRoute } from '../Router'

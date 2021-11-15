@@ -1,9 +1,11 @@
 import {
     html,
     LitElement,
-    css,
-    nothing
+    css
 } from 'lit-element'
+import {
+    nothing
+} from 'lit-html'
 import Auth from '../Auth'
 import {
     anchorRoute,

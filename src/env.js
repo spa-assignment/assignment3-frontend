@@ -1,5 +1,5 @@
 // Export 
 export const env = {
-    apiUrl: 'http://localhost:3000',
-    apiUrlImage: 'http://localhost:3000/images'
+    apiUrl: 'https://dogcare-backend-deploy.herokuapp.com',
+    apiUrlImage: 'https://dogcare-backend-deploy.herokuapp.com/images'
 }

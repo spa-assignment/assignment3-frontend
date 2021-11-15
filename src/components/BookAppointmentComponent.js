@@ -1,8 +1,7 @@
 import {
     html,
     LitElement,
-    css,
-    nothing
+    css
 } from 'lit-element'
 import AppointmentAPI from '../api/AppointmentAPI'
 import Toast from '../Toast'

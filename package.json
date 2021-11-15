@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "clean": "rmdir dist /s /q",
-    "build": "parcel build src/index.html --public-url ./"
+    "build": "parcel build src/index.html --public-url ./ --no-source-maps"
   },
   "keywords": [],
   "author": "",

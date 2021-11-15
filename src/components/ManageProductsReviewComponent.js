@@ -1,4 +1,5 @@
-import { html, LitElement, css, nothing } from 'lit-element'
+import { html, LitElement, css } from 'lit-element'
+import { nothing } from 'lit-html'
 import { env } from '../env'
 import OrderAPI from '../api/OrderAPI'
 import Toast from '../Toast'
