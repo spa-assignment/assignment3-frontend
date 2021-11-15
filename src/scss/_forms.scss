@@ -1,0 +1,16 @@
+.form {
+    &__field {
+        margin-top: 1rem;
+    }
+
+    &__field-label {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &__footer {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,96 @@
+// Toast
+
+.toasts {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 999;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-left: 1rem;
+    max-width: 50%;
+}
+
+.toast {
+    margin-bottom: .5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: #333;
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.14);
+
+    &__progress-bar {
+        --height: 6px;
+        padding: 5px 5px 0 5px;
+    }
+
+    &__content {
+        padding: .5rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__icon {
+        padding-top: 2px;
+
+        &--info {
+            color: rgb(var(--sl-color-info-500));
+        }
+        
+        &--success {
+            color: rgb(var(--sl-color-success-500));
+        }
+
+        &--warning {
+            color: rgb(var(--sl-color-warning-500));
+        }
+
+        &--danger {
+            color: rgb(var(--sl-color-danger-500));
+        }
+    }
+
+    &__message {
+        padding-left: .7em;
+    }
+
+    &__action {
+        margin-left: 1.5em;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.progress-bar {
+    &--info {
+        --indicator-color: rgb(var(--sl-color-gray-900));
+    }
+
+    &--success {
+        --indicator-color: rgb(var(--sl-color-success-500));
+    }
+
+    &--warning {
+        --indicator-color: rgb(var(--sl-color-warning-500));
+    }
+
+    &--danger {
+        --indicator-color: rgb(var(--sl-color-red-500));
+    }
+}
+
+.icon--small {
+    font-size: 20px;
+}
+
+ /* RESPONSIVE - MOBILE */
+@media all and (max-width: 768px) {
+    .toasts {
+        max-width: 100%;
+    }
+}
